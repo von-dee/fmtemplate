@@ -1,0 +1,95 @@
+.page-auth{
+    height: 100%;
+    width: 0;
+    //background: url(../../assets/img/login-bg.jpg) #0856CA;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+
+
+    .wrapper{
+        width: 100%;
+        height: 100%;
+    }
+    .login-form{
+        width: 60%;
+        margin: 0 auto;
+        background: rgba($light,0.97);
+        min-height: 30rem;
+        border-radius: 10px;
+        @include shadow($dark);
+        padding: 20px;
+    }
+    .centered {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        /* bring your own prefixes */
+        transform: translate(-50%, -50%);
+    }
+    .login-block{
+        h4{
+            font-size: 2em;
+            font-weight: 200;
+            margin-bottom: 20px;
+        }
+        .login-input{
+            i{font-size: 2em; color: $mid;}
+            input{
+                border: none !important;
+                height: 50px;
+            }
+            .form-control, .input-group-text{
+                border: none !important;
+                border-radius: 0px;
+                background-color: #fff;
+            }
+        }
+        .login-tab{
+            width: 100%;
+            padding: 5px;
+            border: 1px solid $border;
+            background-color: #fff;
+            border-radius: 15px;
+            position: relative;
+        }
+        .login-btn{
+            width: 47%;
+            margin-right: 5px;
+            border-radius: 50px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            height: 45px;
+            border: none !important;
+        }
+    }
+    .login-content{
+        padding: 3vh;
+    }
+
+    .cover-image{
+        background-image: url(../../assets/img/cover-image.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 100%;
+        height: 15rem;
+        margin-top: 2rem !important;
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width: 640px) {
+        .login-form{
+            width: 90% !important;
+        }
+        .cover-image{
+            display: none !important;
+        }
+        .login-btn{
+            width: 100% !important;
+            margin-bottom: 5px !important;
+        }
+        h4{margin-top: 1rem !important;}
+    }
+}
