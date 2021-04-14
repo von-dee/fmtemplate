@@ -1,6 +1,6 @@
 <div class="page-managebranches">
     <div class="panel-title"></div>
-    <div class="card">
+    <div class="card module">
         <div class="card-body">
             <div class="row">
                 <div class="col-md-12">
@@ -29,7 +29,7 @@
                             </div>
 
                             <div class="col-sm-8">
-                                <div class="card">
+                                <div class="card module">
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-md-12">

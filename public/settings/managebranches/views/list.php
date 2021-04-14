@@ -1,5 +1,5 @@
 <div class="page-managebranches">
-    <div class="card">
+    <div class="card module">
         <div class="card-body">
             <div class="row">
                 <div class="col-md-12">

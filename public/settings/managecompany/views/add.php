@@ -1,5 +1,5 @@
 <div class="page-managecompany">
-    <div class="card">
+    <div class="card module">
         <div class="card-body">
             <div class="row">
                 <div class="col-md-12">
@@ -25,7 +25,7 @@
 
                         <div class="row">
                             <div class="col-sm-12 col-lg-4">
-                                <div class="card">
+                                <div class="card module">
                                     <div class="card-body">
                                         <div class="profile-photo row">
                                             <img id="profile"
@@ -44,7 +44,7 @@
                             </div>
 
                             <div class="col-sm-12 col-lg-8">
-                                <div class="card">
+                                <div class="card module">
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-md-12">
