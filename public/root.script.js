@@ -46,8 +46,8 @@ function logout() {
       text: "You want to logout of the system?",
       type: "warning",
       showCancelButton: !0,
-      confirmButtonColor: "#0756CA",
-      cancelButtonColor: "#F44236",
+      confirmButtonColor: "#6F42C1",
+      cancelButtonColor: "#CAD0E8",
       confirmButtonText: "Logout!"
   }).then(function (t) {
       console.log(t.value);

@@ -1,6 +1,6 @@
     <div class="az-footer ht-40">
       <div class="container ht-100p pd-t-0-f">
-        <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright &copy; <?php echo  APP_NAME;?> 2020</span>
+        <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright &copy; <?php echo date('Y').' '.APP_NAME;?> </span>
       </div><!-- container -->
     </div><!-- az-footer -->
 
@@ -12,11 +12,13 @@
     <script src="theme/assets/lib/jquery.flot/jquery.flot.resize.js"></script>
     <script src="theme/assets/lib/chart.js/Chart.bundle.min.js"></script>
     <script src="theme/assets/lib/peity/jquery.peity.min.js"></script>
+    <script src="theme/assets/lib/sweetalert2/sweetalert2.min.js"></script>
 
     <script src="theme/assets/js/azia.js"></script>
     <script src="theme/assets/js/chart.flot.sampledata.js"></script>
     <script src="theme/assets/js/dashboard.sampledata.js"></script>
     <script src="theme/assets/js/jquery.cookie.js" type="text/javascript"></script>
+    <script src="public/root.script.js"></script>
     <script>
       $(function(){
         'use strict'

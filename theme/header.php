@@ -16,6 +16,7 @@
     <link href="theme/assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
     <link href="theme/assets/lib/typicons.font/typicons.css" rel="stylesheet">
     <link href="theme/assets/lib/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="theme/assets/lib/sweetalert2/sweetalert2.min.css">
 
     <!-- azia CSS -->
     <link rel="stylesheet" href="theme/assets/css/azia.css">

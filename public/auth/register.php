@@ -1,120 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
+  <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <title><?php echo APP_NAME;?></title>
+    <!-- Meta -->
+    <meta name="description" content="Responsive Bootstrap 4 Dashboard Template">
+    <meta name="author" content="BootstrapDash">
 
+    <title><?php echo  APP_NAME;?> : Signup</title>
     <link rel="shortcut icon" href="<?php echo APP_FAVICON;?>" type="image/png">
-    <!-- Bootstrap core CSS -->
-    <link href="theme/assets/vendors/bootstrap/css/bootstrap.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="theme/assets/vendors/line-awesome/css/line-awesome.min.css" rel="stylesheet">
-    <link href="theme/assets/vendors/sweetalert2/sweetalert2.min.css" rel="stylesheet">
-    <link href="theme/assets/css/simple-sidebar.css" rel="stylesheet">
-    <link href="theme/assets/css/style.css" rel="stylesheet">
+    <!-- vendor css -->
+    <link href="theme/assets/lib/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="theme/assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="theme/assets/lib/typicons.font/typicons.css" rel="stylesheet">
 
-    <script src="theme/assets/vendors/jquery/jquery.min.js"></script>
+    <!-- azia CSS -->
+    <link rel="stylesheet" href="theme/assets/css/azia.css">
 
-</head>
+  </head>
+  <body class="az-body">
 
-<body class="page-auth">
-    <?php if(isset($attempt_in)){?>
-        <div class="alert-danger">
-            <?php
-                if($attempt_in = '0'){
-                    $msg =  'Please fill all fields to continue...';
-                }else if($attempt_in =='1'){
-                    $msg = 'Invalid Code generation for user.';
-                }else if($attempt_in =='120'){
-                    $msg = 'User id generation Error.';
-                }
-            ?>   
+    <div class="az-signup-wrapper">
+      <div class="az-column-signup-left">
+        <div>
+          <i class="typcn typcn-chart-bar-outline"></i>
+          <h1 class="az-logo"><?php echo  APP_NAME;?></h1>
+          <h5>Responsive Modern Dashboard &amp; Admin Template</h5>
+          <p>We are excited to launch our new company and product Azia. After being featured in too many magazines to mention and having created an online stir, we know that BootstrapDash is going to be big. We also hope to win Startup Fictional Business of the Year this year.</p>
+          <p>Browse our site and see for yourself why you need Azia.</p>
+          <a href="index.html" class="btn btn-outline-indigo">Learn More</a>
         </div>
-    <?php }  $token = generateFormToken(); ?>
-    <div class="wrapper">
-        <div class="login-form centered">
-            <div class="row login-content">
-                <div class="col-sm-12">
-                    <div class="brand"><img src="<?php echo APP_LOGO;?>" alt="logo" width="180px"></div>
-                </div>
-                <div class="col-sm-7 cover-image"></div>
-                
-                <div class="col-lg-5 col-sm-12 login-block">
-                    <h4>Register  User</h4>
-                    <?php echo (($msg))?'<div class="errormsg">'.$msg.'</div>':''; ?>
-                    <form action="index.php?action=register&pg=1" method="post" enctype="application/x-www-form-urlencoded"
-                        name="loginForm" id="loginForm" autocomplete="off">
-                        <input id="token" name="token" value="<?php echo $token ; ?>" type="hidden" />
-                        <div class="login-tab mb-3" shadow>
-                            <div class="input-group login-input mb-1">
-                                <div class="input-group-prepend">
-                                    <i class="la la-signature input-group-text"></i>
-                                </div>
-                                <input type="text" class="form-control" placeholder="first name" aria-label="text" aria-describedby="basic-addon1" name="ufname">
-                            </div>
-                            <div class="input-group login-input mb-1">
-                                <div class="input-group-prepend">
-                                    <i class="la la-signature input-group-text"></i>
-                                </div>
-                                <input type="text" class="form-control" placeholder="last name" aria-label="text" aria-describedby="basic-addon1" name="ulname">
-                            </div>
-                            <div class="input-group login-input mb-1">
-                                <div class="input-group-prepend">
-                                    <i class="la la-at input-group-text"></i>
-                                </div>
-                                <input type="text" class="form-control" placeholder="email" aria-label="Email" aria-describedby="basic-addon1" name="uemail">
-                            </div>
-                            <div class="input-group login-input mb-1">
-                                <div class="input-group-prepend">
-                                    <i class="la la-phone input-group-text"></i>
-                                </div>
-                                <input type="text" class="form-control" placeholder="phone number" aria-label="PhoneNumber" aria-describedby="basic-addon1" name="uphoneno">
-                            </div>
-                            <div class="input-group login-input mb-1">
-                                <div class="input-group-prepend">
-                                    <i class="la la-user input-group-text"></i>
-                                </div>
-                                <input type="text" class="form-control" placeholder="user name" aria-label="UserName" aria-describedby="basic-addon1" name="uname">
-                            </div>
-                            
-                            <div class="input-group login-input" border-top>
-                                <div class="input-group-prepend">
-                                    <i class="la la-lock input-group-text"></i>
-                                </div>
-                                <input type="password" class="form-control" placeholder="******" aria-label="Email" aria-describedby="basic-addon1" name="pwd">
-                            </div>
-                        </div>
+      </div><!-- az-column-signup-left -->
+      <div class="az-column-signup">
+        <h1 class="az-logo"><?php echo  APP_NAME;?></h1>
+        <div class="az-signup-header">
+          <h2>Get Started</h2>
+          <h4>It's free to signup and only takes a minute.</h4>
 
-                        <div class="btn-block">
-                            <button type="submit" class="btn btn-primary login-btn">Register</button>
-                            <a href="index.php?action=login" class="btn btn-danger login-btn pt-2">Cancel</a><br>
-                            <?php $session->set('1_token', $token);?>
-                        </div>
-                    </form>
-                </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Bootstrap core JavaScript -->
-    <script src="theme/assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="theme/assets/vendors/sweetalert2/sweetalert2.min.js"></script>
-    <script src="public/root.script.js"></script>
-    <!-- Menu Toggle Script -->
+          <form action="index.php?action=index&pg=1" method="post" enctype="application/x-www-form-urlencoded" name="loginForm" id="loginForm" autocomplete="off">
+            <input id="token" name="token" value="<?php echo $token ; ?>" type="hidden" />
+            <div class="form-group">
+              <label>Firstname &amp; Lastname</label>
+              <input type="text" class="form-control" placeholder="Enter your firstname and lastname">
+            </div><!-- form-group -->
+            <div class="form-group">
+              <label>Email</label>
+              <input type="text" class="form-control" placeholder="Enter your email">
+            </div><!-- form-group -->
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" class="form-control" placeholder="Enter your password">
+            </div><!-- form-group -->
+            <button class="btn btn-az-primary btn-block">Create Account</button>
+            <div class="row row-xs">
+              <div class="col-sm-6"><button class="btn btn-block"><i class="fab fa-facebook-f"></i> Signup with Facebook</button></div>
+              <div class="col-sm-6 mg-t-10 mg-sm-t-0"><button class="btn btn-primary btn-block"><i class="fab fa-twitter"></i> Signup with Twitter</button></div>
+            </div><!-- row -->
+            <?php $session->set('1_token', $token);?>
+          </form>
+        </div><!-- az-signup-header -->
+        <div class="az-signup-footer">
+          <p>Already have an account? <a href="index.php?action=login">Sign In</a></p>
+        </div><!-- az-signin-footer -->
+      </div><!-- az-column-signup -->
+    </div><!-- az-signup-wrapper -->
+
+    <script src="theme/assets/lib/jquery/jquery.min.js"></script>
+    <script src="theme/assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="theme/assets/lib/ionicons/ionicons.js"></script>
+    <script src="theme/assets/js/jquery.cookie.js" type="text/javascript"></script>
+
+    <script src="theme/assets/js/azia.js"></script>
     <script>
-        $("#menu-toggle").click(function (e) {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
-        });
+      $(function(){
+        'use strict'
+
+      });
     </script>
-
-</body>
-
+  </body>
 </html>

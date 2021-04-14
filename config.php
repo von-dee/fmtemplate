@@ -20,7 +20,7 @@ define("WEB_PUBLIC",    WEB_ROOT.DS."public");
 define("WEB_THEME",     WEB_ROOT.DS."theme");
 define("WEB_UPLOADS",   WEB_MEDIA.DS."uploads");
 
-define("WEB_DB_PREFIX","amb_");
+define("WEB_DB_PREFIX","frw_");
 
 //Post Keeper
 if($_REQUEST){

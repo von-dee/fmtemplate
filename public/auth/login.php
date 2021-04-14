@@ -1,104 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
 
-<head>
-
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <title><?php echo APP_NAME;?></title>
+    <!-- Meta -->
+    <meta name="description" content="Responsive Bootstrap 4 Dashboard Template">
+    <meta name="author" content="BootstrapDash">
 
+    <title><?php echo  APP_NAME;?> : Login</title>
     <link rel="shortcut icon" href="<?php echo APP_FAVICON;?>" type="image/png">
-    <!-- Bootstrap core CSS -->
-    <link href="theme/assets/vendors/bootstrap/css/bootstrap.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="theme/assets/vendors/line-awesome/css/line-awesome.min.css" rel="stylesheet">
-    <link href="theme/assets/vendors/sweetalert2/sweetalert2.min.css" rel="stylesheet">
-    <link href="theme/assets/css/simple-sidebar.css" rel="stylesheet">
-    <link href="theme/assets/css/style.css" rel="stylesheet">
+    <!-- vendor css -->
+    <link href="theme/assets/lib/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="theme/assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="theme/assets/lib/typicons.font/typicons.css" rel="stylesheet">
 
-    <script src="theme/assets/vendors/jquery/jquery.min.js"></script>
+    <!-- azia CSS -->
+    <link rel="stylesheet" href="theme/assets/css/azia.css">
+    <link rel="stylesheet" href="theme/assets/css/style.css">
 
-</head>
-
-<body class="page-auth">
+  </head>
+  <body class="az-body">
     <?php if(isset($attempt_in)){?>
-        <div class="alert-danger">
-            <?php
-                if($attempt_in < 3){
-                    $msg =  'Invalid user name or password.';
-                }else if($attempt_in =='11'){
-                    $msg = 'Invalid Code entered.';
-                }else if($attempt_in =='120'){
-                    $msg = 'Suspended account.';
-                }else if($attempt_in =='140'){
-                    $msg = 'Locked. Wait for 5min and try again.';
-                }else if($attempt_in =='110'){
-                    $msg = 'User account locked.';
-                }
-            ?>   
-        </div>
-    <?php }  $token= generateFormToken(); ?>
-    <div class="wrapper">
-        <div class="login-form centered">
-            <div class="row login-content">
-                <div class="col-sm-12">
-                    <div class="brand"><img src="<?php echo APP_LOGO;?>" alt="logo" width="180px"></div>
-                </div>
-                <div class="col-sm-7 cover-image"></div>
-                
-                <div class="col-lg-5 col-sm-12 login-block">
-                    <h4>Login</h4>
-                    <?php print (($msg))?'<div class="errormsg">'.$msg.'</div>':''; ?>
-                    <form action="index.php?action=index&pg=1" method="post" enctype="application/x-www-form-urlencoded"
-                        name="loginForm" id="loginForm" autocomplete="off">
-                        <input id="token" name="token" value="<?php echo $token ; ?>" type="hidden" />
-                        <div class="login-tab mb-3" shadow>
-                            <div class="input-group login-input mb-1">
-                                <div class="input-group-prepend">
-                                    <i class="la la-envelope input-group-text"></i>
-                                </div>
-                                <input type="text" class="form-control" placeholder="User name" aria-label="Email" aria-describedby="basic-addon1" name="uname">
-                            </div>
-                            
-                            <div class="input-group login-input" border-top>
-                                <div class="input-group-prepend">
-                                    <i class="la la-lock input-group-text"></i>
-                                </div>
-                                <input type="password" class="form-control" placeholder="******" aria-label="Email" aria-describedby="basic-addon1" name="pwd">
-                            </div>
-                        </div>
-
-                        <div class="btn-block">
-                            <button type="submit" class="btn btn-primary login-btn">Login Now</button>
-                            <a href="index.php?action=register" class="btn btn-secondary login-btn pt-2">Register</a><br>
-                        </div>
-                        
-                        <a href="index.php" class="forgot-link">Forgot password?</a>
-                        <input type="hidden" name="doLogin" id="doLogin" value="systemPingPass" /><br />
-                        <small>us: admin | ps: space123</small>
-                        <?php $session->set('1_token', $token);?>
-                    </form>
-                </div>
-                </div>
-            </div>
-        </div>
+    <div class="alert-danger">
+        <?php
+            if($attempt_in < 3){
+                $msg =  'Invalid user name or password.';
+            }else if($attempt_in =='11'){
+                $msg = 'Invalid Code entered.';
+            }else if($attempt_in =='120'){
+                $msg = 'Suspended account.';
+            }else if($attempt_in =='140'){
+                $msg = 'Locked. Wait for 5min and try again.';
+            }else if($attempt_in =='110'){
+                $msg = 'User account locked.';
+            }
+        ?>   
     </div>
-    <!-- Bootstrap core JavaScript -->
-    <script src="theme/assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="theme/assets/vendors/sweetalert2/sweetalert2.min.js"></script>
-    <script src="public/root.script.js"></script>
-    <!-- Menu Toggle Script -->
+    <?php }  $token= generateFormToken(); ?>
+    <div class="az-signin-wrapper">
+      <div class="az-card-signin"><?php print (($msg))?'<div class="errormsg">'.$msg.'</div>':''; ?>
+        <h1 class="az-logo"><?php echo  APP_NAME;?></h1>
+        <div class="az-signin-header">
+          <h2>Welcome back!</h2>
+          <h4>Please sign in to continue</h4>
+          
+          <form action="index.php?action=index&pg=1" method="post" enctype="application/x-www-form-urlencoded" name="loginForm" id="loginForm" autocomplete="off">
+            <input id="token" name="token" value="<?php echo $token ; ?>" type="hidden" />
+            <div class="form-group">
+              <label>User Name</label>
+              <input type="text" class="form-control" name="uname" placeholder="Enter your user name" >
+            </div><!-- form-group -->
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" class="form-control" name="pwd" placeholder="Enter your password">
+            </div><!-- form-group -->
+            <button type="submit" class="btn btn-az-primary btn-block">Sign In</button>
+            <input type="hidden" name="doLogin" id="doLogin" value="systemPingPass" /><br />
+            <?php $session->set('1_token', $token);?>
+          </form>
+        </div><!-- az-signin-header -->
+        <div class="az-signin-footer">
+          <p><a href="">Forgot password?</a></p>
+          <p>Don't have an account? <a href="index.php?action=register">Create an Account</a></p>
+        </div><!-- az-signin-footer -->
+      </div><!-- az-card-signin -->
+    </div><!-- az-signin-wrapper -->
+
+    <script src="theme/assets/lib/jquery/jquery.min.js"></script>
+    <script src="theme/assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="theme/assets/lib/ionicons/ionicons.js"></script>
+    <script src="theme/assets/js/jquery.cookie.js" type="text/javascript"></script>
+    <script src="theme/assets/js/jquery.cookie.js" type="text/javascript"></script>
+
+    <script src="theme/assets/js/azia.js"></script>
     <script>
-        $("#menu-toggle").click(function (e) {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
-        });
+      $(function(){
+        'use strict'
+
+      });
     </script>
-
-</body>
-
+  </body>
 </html>

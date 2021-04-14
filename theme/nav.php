@@ -10,41 +10,39 @@
                 <a href="" class="close">&times;</a>
             </div><!-- az-header-menu-header -->
             <ul class="nav">
-                <li class="nav-item active show">
+                <li class="nav-item <?php echo(($pg=='dashboard'))?'active show' :'';?>">
                     <a href="index.php?pg=dashboard" class="nav-link"><i class="typcn typcn-chart-area-outline"></i> Dashboard</a>
                 </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link with-sub"><i class="typcn typcn-document"></i> Pages</a>
+                <?php
+                    $rootmnu = $menu->rootmenu();
+                    foreach ($rootmnu as $root) {
+                        $submenu = $menu->submenu();
+                        $check = $menu->has_submenu($root['RMN_CODE'], $submenu, 'SMN_RMN_CODE');
+                        if($check){
+                ?>
+                
+                <li class="nav-item <?php echo(($pg==$nav->activetab($root['RMN_SLUG'])))?'active show' :'';?>">
+                    <a href="" class="nav-link with-sub"><i class="typcn typcn-document"></i> <?php echo $root['RMN_NAME'];?></a>
                     <nav class="az-menu-sub">
-                        <a href="page-signin.html" class="nav-link">Sign In</a>
-                        <a href="page-signup.html" class="nav-link">Sign Up</a>
+                        <?php 
+                            foreach($submenu as $sub){
+                            if($sub['SMN_RMN_CODE'] == $root['RMN_CODE']){
+                                $root_url = (string) $root['RMN_SLUG'];
+                                $sub_url = (string) $sub['SMN_SLUG'];
+                        ?>
+                        <a href="<?php echo $nav->navigate($root_url,$sub_url);?>" class="nav-link"><?php echo $sub['SMN_NAME'];?></a>
+                        <?php }}?>
                     </nav>
                 </li>
-                <li class="nav-item">
-                    <a href="chart-chartjs.html" class="nav-link"><i class="typcn typcn-chart-bar-outline"></i>
-                        Charts</a>
-                </li>
-                <li class="nav-item">
-                    <a href="form-elements.html" class="nav-link"><i class="typcn typcn-chart-bar-outline"></i>
-                        Forms</a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link with-sub"><i class="typcn typcn-book"></i> Components</a>
-                    <div class="az-menu-sub">
-                        <div class="container">
-                            <div>
-                                <nav class="nav">
-                                    <a href="elem-buttons.html" class="nav-link">Buttons</a>
-                                    <a href="elem-dropdown.html" class="nav-link">Dropdown</a>
-                                    <a href="elem-icons.html" class="nav-link">Icons</a>
-                                    <a href="table-basic.html" class="nav-link">Table</a>
-                                </nav>
-                            </div>
-                        </div><!-- container -->
-                    </div>
-                </li>
+                <?php } else { ?>
+                        <li class="nav-item <?php echo(($pg==$nav->activetab($root['RMN_SLUG'])))?'active show' :'';?>">
+                            <a class="nav-link" href="<?php echo $nav->navigate($root['RMN_SLUG']);?>"><i class="typcn typcn-chart-area-outline"></i> <?php echo $root['RMN_NAME'];?></a>
+                        </li>
+                    <?php } ?>
+                <?php } ?>
             </ul>
         </div><!-- az-header-menu -->
+
         <div class="az-header-right">
             <a href="#" target="_blank"
                 class="az-header-search-link"><i class="far fa-file-alt"></i></a>
@@ -111,7 +109,7 @@
                     <a href="" class="dropdown-item"><i class="typcn typcn-edit"></i> Edit Profile</a>
                     <a href="" class="dropdown-item"><i class="typcn typcn-time"></i> Activity Logs</a>
                     <a href="" class="dropdown-item"><i class="typcn typcn-cog-outline"></i> Account Settings</a>
-                    <a href="page-signin.html" class="dropdown-item"><i class="typcn typcn-power-outline"></i> Sign
+                    <a href="#" class="dropdown-item" onclick="logout()"><i class="typcn typcn-power-outline"></i> Sign
                         Out</a>
                 </div><!-- dropdown-menu -->
             </div>
