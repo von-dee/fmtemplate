@@ -1,6 +1,5 @@
 <div class="page-managebranches">
-    
-    <div class="card" shadow>
+    <div class="card">
         <div class="card-body">
             <div class="row">
                 <div class="col-md-12">
@@ -8,7 +7,7 @@
                         <div class="panel-title">
                             <h5>Branches</h5>
                             <div class="panel-right">
-                                <button type="button" class="btn btn-info" onclick="push({'view':'add','viewpage':'','payload':'<?php echo $companycode;?>'})"><i class="la la-plus"></i> Add</button>
+                                <button type="button" class="btn btn-primary" onclick="push({'view':'add','viewpage':'','payload':'<?php echo $companycode;?>'})"><i class="la la-plus"></i> Add</button>
                             </div>
                         </div>
                         <div class="panel-body">
@@ -22,7 +21,7 @@
                                                     <?php echo $paging->renderPrev('<span class="fa fa-chevron-left"></span>','<span class="fa fa-chevron-left"></span>');?>
                                                     <input name="page" type="text"
                                                         value="<?php echo $paging->renderNavNum();?>" readonly
-                                                        style="width:40px;padding-left:5px; height:31px;border-radius:5px; color: inherit;border:1px solid #CDD4DC; background:transparent;" />
+                                                        style="width:40px;padding-left:5px; height:31px;border-radius:0px; color: inherit;border:1px solid #CDD4E0; background:transparent;" />
                                                     <?php echo $paging->renderNext('<span class="fa fa-chevron-right"></span>','<span class="fa fa-chevron-right"></span>');?>
                                                     <?php echo $paging->renderLast('<span class="fa fa-angle-double-right"></span>');?>
                                                     <?php $paging->limitList($list->limit,"myform");?>
@@ -40,14 +39,12 @@
                                                             class="btn btn-secondary">
                                                             <i class="la la-search"></i>
                                                         </button>
-                                                        <button class="btn btn-info"
-                                                            onclick="document.getElementById('fdsearch').value='';document.myform.submit;"><i
-                                                                class="la la-refresh"></i></button>
+                                                        <button class="btn btn-primary" onclick="document.getElementById('fdsearch').value='';document.myform.submit;"><i class="la la-refresh"></i></button>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col">
-                                                <span style="float:right;"><?php echo $paging->page_count($paging);?></span>
+                                                <span class="record_count"><?php echo $paging->page_count($paging);?></span>
                                             </div>
                                         </div>
                                     </div>

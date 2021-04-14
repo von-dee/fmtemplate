@@ -1,6 +1,6 @@
 <div class="page-managebranches">
     <div class="panel-title"></div>
-    <div class="card" shadow>
+    <div class="card">
         <div class="card-body">
             <div class="row">
                 <div class="col-md-12">
@@ -29,7 +29,7 @@
                             </div>
 
                             <div class="col-sm-8">
-                                <div class="card" shadow>
+                                <div class="card">
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-md-12">
@@ -78,7 +78,7 @@
                                                                         <option value="" disabled selected>Select
                                                                             country...</option>
                                                                         <?php 
-                                                                            $nation = $engine->getcountries();
+                                                                            $nation = $engine->countries();
                                                                             foreach($nation as $country){
                                                                         ?>
                                                                         <option
@@ -97,7 +97,7 @@
                                                                         <option value="" disabled selected>Select
                                                                             region...</option>
                                                                         <?php 
-                                                                            $regions = $engine->getregions();
+                                                                            $regions = $engine->regions();
                                                                             foreach($regions as $reg){
                                                                         ?>
                                                                         <option
@@ -110,36 +110,7 @@
                                                                 </div>
                                                             </div>
 
-                                                            <div class="col-sm-6">
-                                                                <div class="form-group">
-                                                                    <label for="compcity">City</label>
-                                                                    <input type="text" class="form-control"
-                                                                        name="compcity" id="compcity"
-                                                                        value="<?php echo (is_object($result) ? '' :  $result['BRA_CITY'] ); ?>"
-                                                                        placeholder="">
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-sm-6">
-                                                                <div class="form-group">
-                                                                    <label for="compsince">Date Since</label>
-                                                                    <input <?php echo (is_object($result) ? 'type="date"' :  ($result['BRA_SINCE'] ? 'type="text"':'type="date"') ); ?> class="form-control"
-                                                                        name="compsince" id="compsince"
-                                                                        value="<?php echo (is_object($result) ? '' :  $result['BRA_SINCE'] ); ?>"
-                                                                        placeholder="">
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-sm-6">
-                                                                <div class="form-group">
-                                                                    <label for="compseats">Seats</label>
-                                                                    <input type="number" class="form-control"
-                                                                        name="compseats" id="compseats"
-                                                                        value="<?php echo (is_object($result) ? '' :  $result['BRA_SEATS'] ); ?>"
-                                                                        placeholder="">
-                                                                </div>
-                                                            </div>
-
+                                    
                                                             <div class="col-sm-6">
                                                                 <div class="form-group">
                                                                     <label for="compstatus">Status</label>
@@ -152,27 +123,6 @@
                                                                             <?php echo is_object($result) ? '' : ($result['BRA_STATUS']=='2' ? 'selected':'');?>
                                                                             value="2">Active</option>
                                                                     </select>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-sm-12 form-group">
-                                                                <label for=""> Services Offered</label> <br>
-                                                                <div class="service-block">
-                                                                <?php 
-                                                                    if(!is_object($result)){
-                                                                        $bracode = $result['BRA_CODE'];
-                                                                        $services = $engine->get_branch_services($bracode);
-                                                                        foreach ($services as $key => $value) {
-                                                                            $serve[] = $value['code'];
-                                                                        }
-                                                                    }
-                                                                    $services = $engine->get_company_services($companycode);
-                                                                    foreach($services as $key => $se){
-                                                                ?>
-                                                                    <label class="checkbox-inline checkbox-cool">
-                                                                        <input type="checkbox" name="comp_services[]" <?php  echo(!empty($serve) && in_array($se['code'],$serve))?'checked="true"':''?> value="<?php echo $se['code'].','.$se['name'];?>"/><?php echo $se['name'];?>
-                                                                    </label>
-                                                                <?php } ?>
                                                                 </div>
                                                             </div>
                                                         </div>

@@ -4,6 +4,37 @@ Generated SCSS
 @import "mixins";
 @import "variables";
 
+form{
+    width: 100% !important;
+}
+.card{
+    margin-bottom: 2rem;
+    min-height: 34rem;
+    border: 0;
+}
+
+label{
+    margin-top: 10px;
+}
+#pager{
+    margin-top: -5px;
+}
+.page .col{
+    margin-top: 10px;
+}
+
+.page {
+    margin-top: 10px;
+    border: 1px solid #CDD4E0;
+    padding: 0 16px;
+    border-radius: 1px;
+    margin-bottom: 2rem;
+}
+
+.record_count{
+    padding-top: 2rem;
+}
+
 .errormsg {
     background: $danger;
     color: $light;
@@ -20,6 +51,33 @@ select {
     -webkit-appearance: none;
     appearance: none;
     border: 1px solid #EDEDED !important;
+}
+
+.actives {
+    color: $secondary;
+    font-size: 1.6em;
+}
+
+.inactive {
+    color: $danger;
+    font-size: 1.6em;
+}
+
+.panel-right {
+    margin-top: -40px;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+*[avatar] {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.br-top{
+    border-top: 1px solid #EDEDED;
 }
 
 table , .table{

@@ -7,7 +7,7 @@
                         <div class="panel-title">
                             <h5>Blank Page</h5>
                             <div class="panel-right">
-                                <button type="button" class="btn btn-info"><i class="la la-plus"></i> Add</button>
+                                <button type="button" class="btn btn-primary"><i class="la la-plus"></i> Add</button>
                             </div>
                         </div>
                         <div class="main-content">

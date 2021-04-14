@@ -10,7 +10,7 @@
                 <a href="" class="close">&times;</a>
             </div><!-- az-header-menu-header -->
             <ul class="nav">
-                <li class="nav-item <?php echo(($pg=='dashboard'))?'active show' :'';?>">
+                <li class="nav-item <?php echo(($pg=='dashboard'))?'active' :'';?>">
                     <a href="index.php?pg=dashboard" class="nav-link"><i class="typcn typcn-chart-area-outline"></i> Dashboard</a>
                 </li>
                 <?php
@@ -21,7 +21,7 @@
                         if($check){
                 ?>
                 
-                <li class="nav-item <?php echo(($pg==$nav->activetab($root['RMN_SLUG'])))?'active show' :'';?>">
+                <li class="nav-item <?php echo(($pg==$nav->activetab($root['RMN_SLUG'])))?'active' :'';?>">
                     <a href="" class="nav-link with-sub"><i class="typcn typcn-document"></i> <?php echo $root['RMN_NAME'];?></a>
                     <nav class="az-menu-sub">
                         <?php 
@@ -35,7 +35,7 @@
                     </nav>
                 </li>
                 <?php } else { ?>
-                        <li class="nav-item <?php echo(($pg==$nav->activetab($root['RMN_SLUG'])))?'active show' :'';?>">
+                        <li class="nav-item <?php echo(($pg==$nav->activetab($root['RMN_SLUG'])))?'active' :'';?>">
                             <a class="nav-link" href="<?php echo $nav->navigate($root['RMN_SLUG']);?>"><i class="typcn typcn-chart-area-outline"></i> <?php echo $root['RMN_NAME'];?></a>
                         </li>
                     <?php } ?>

@@ -505,7 +505,7 @@ $querys = ['odb'=>$sql,'query'=>$query, 'limit'=>$limit, 'offset'=> $lenght, 'pa
 	public function limitList($limit, $formname)
 	{
 		echo '<input type="hidden" value="" name="page" id="pagehiddenallform" />';
-		echo '<select name="limit" onchange="document.' . $formname . '.submit()" style="width:60px;padding-left:5px; height:31px;border-radius:5px; border:1px solid #EFEFEF;">
+		echo '<select name="limit" onchange="document.' . $formname . '.submit()" style="width:60px;padding-left:5px; height:31px;border-radius:0px; border:1px solid #CDD4E0;">
                 <option ' . (($limit == '10') ? 'selected="selected"' : '') . ' value="10">10</option>
                 <option ' . (($limit == '50') ? 'selected="selected"' : '') . ' value="50">50</option>
                 <option ' . (($limit == '100') ? 'selected="selected"' : '') . ' value="100">100</option>
@@ -516,7 +516,7 @@ $querys = ['odb'=>$sql,'query'=>$query, 'limit'=>$limit, 'offset'=> $lenght, 'pa
 
 	public function deplayPage($formname)
 	{
-		echo ' <input name="page" type="text" value="' . $this->renderNavNum() . '" style="width:40px;padding-left:5px; height:31px;border-radius:5px; border:1px solid #EFEFEF;" onblur="document.getElementById(\'pagehiddenallform\').value=this.value;document.' . $formname . '.submit();"/>';
+		echo ' <input name="page" type="text" value="' . $this->renderNavNum() . '" style="width:40px;padding-left:5px; height:31px;border-radius:0px; border:1px solid #CDD4E0;" onblur="document.getElementById(\'pagehiddenallform\').value=this.value;document.' . $formname . '.submit();"/>';
 	}
 
 	/**
@@ -572,7 +572,7 @@ $querys = ['odb'=>$sql,'query'=>$query, 'limit'=>$limit, 'offset'=> $lenght, 'pa
                         <div class="col-sm-3">
                             <div id="pager">
                                 ' . $paging->renderFirst('') . $paging->renderPrev('<span class="fa fa-chevron-left"></span>', '<span class="fa fa-chevron-left"></span>') . '
-                                <input name="page" type="text" value="' . $paging->renderNavNum() . '"  style="width:40px;padding-left:5px; height:31px;border-radius:5px; border:1px solid #EFEFEF;" onclick="document.getElementById(\'view\').value=\'\';document.getElementById(\'viewpage\').value=\'searchitem\';document.myform.submit;"/>
+                                <input name="page" type="text" value="' . $paging->renderNavNum() . '"  style="width:40px;padding-left:5px; height:31px;border-radius:0px; border:1px solid #CDD4E0;" onclick="document.getElementById(\'view\').value=\'\';document.getElementById(\'viewpage\').value=\'searchitem\';document.myform.submit;"/>
                                 ' . $paging->renderNext('<span class="fa fa-chevron-right"></span>', '<span class="fa fa-chevron-right"></span>') . '
                                 ' . $paging->renderLast('') . $paging->limitList($limit, 'myform') . '
                             </div>

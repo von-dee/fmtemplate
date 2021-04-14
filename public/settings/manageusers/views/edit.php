@@ -1,6 +1,6 @@
 <div class="page-manageusers">
 <script src="public/settings/manageusers/scripts/tree.js"></script>
-    <div class="card" shadow>
+    <div class="card">
         <div class="card-body">
             <div class="row">
                 <div class="col-md-12">
