@@ -1,17 +1,17 @@
 <div class="az-header">
   <div class="container">
     <div class="az-header-left">
-      <a href="index.html" class="az-logo"><span></span> <?php echo APP_NAME; ?></a>
+      <a href="index.php?p=dashboard" class="az-logo"><span></span> <?php echo APP_NAME; ?></a>
       <a href="" id="azMenuShow" class="az-header-menu-icon d-lg-none"><span></span></a>
     </div><!-- az-header-left -->
     <div class="az-header-menu">
       <div class="az-header-menu-header">
-        <a href="index.html" class="az-logo"><span></span> <?php echo APP_NAME; ?></a>
+        <a href="index.php?p=dashboard" class="az-logo"><span></span> <?php echo APP_NAME; ?></a>
         <a href="" class="close">&times;</a>
       </div><!-- az-header-menu-header -->
       <ul class="nav">
         <li class="nav-item active show">
-          <a href="index.html" class="nav-link"><i class="typcn typcn-chart-area-outline"></i> Dashboard</a>
+          <a href="index.php?p=dashboard" class="nav-link"><i class="typcn typcn-chart-area-outline"></i> Dashboard</a>
         </li>
         <li class="nav-item">
           <a href="" class="nav-link with-sub"><i class="typcn typcn-document"></i> Pages</a>
@@ -109,7 +109,7 @@
           <a href="" class="dropdown-item"><i class="typcn typcn-edit"></i> Edit Profile</a>
           <a href="" class="dropdown-item"><i class="typcn typcn-time"></i> Activity Logs</a>
           <a href="" class="dropdown-item"><i class="typcn typcn-cog-outline"></i> Account Settings</a>
-          <a href="page-signin.html" class="dropdown-item"><i class="typcn typcn-power-outline"></i> Sign Out</a>
+          <a href="#" class="dropdown-item" onclick="logout()"><i class="typcn typcn-power-outline"></i> Sign Out</a>
         </div><!-- dropdown-menu -->
       </div>
     </div><!-- az-header-right -->

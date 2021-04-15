@@ -17,9 +17,11 @@
     <link href="media/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
     <link href="media/lib/typicons.font/typicons.css" rel="stylesheet">
     <link href="media/lib/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="media/lib/sweetalert2/sweetalert2.min.css">
 
     <!-- azia CSS -->
     <link rel="stylesheet" href="media/css/azia.css">
+    <link rel="stylesheet" href="media/css/style.css">
 
   </head>
   <body>

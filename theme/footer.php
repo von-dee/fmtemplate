@@ -7,16 +7,19 @@
 
     <script src="media/lib/jquery/jquery.min.js"></script>
     <script src="media/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="media/lib/sweetalert2/sweetalert2.min.js"></script>
     <script src="media/lib/ionicons/ionicons.js"></script>
     <script src="media/lib/jquery.flot/jquery.flot.js"></script>
     <script src="media/lib/jquery.flot/jquery.flot.resize.js"></script>
     <script src="media/lib/chart.js/Chart.bundle.min.js"></script>
     <script src="media/lib/peity/jquery.peity.min.js"></script>
+    
 
     <script src="media/js/azia.js"></script>
     <script src="media/js/chart.flot.sampledata.js"></script>
     <script src="media/js/dashboard.sampledata.js"></script>
-    <script src="media/js/jquery.cookie.js" type="text/javascript"></script>
+    <!-- <script src="media/js/jquery.cookie.js" type="text/javascript"></script> -->
+    <script src="public/root.script.js"></script>
     <script>
       $(function(){
         'use strict'
