@@ -7,10 +7,10 @@
 
 $engine	  = "mysqli";
 $port     = "3306";
-
 $server   = "localhost";
 $username = "root";
-$password = "root"; 
+$password = ""; 
+$database = "groomia";
 
-$database = "framework_db";
+
 ?>
