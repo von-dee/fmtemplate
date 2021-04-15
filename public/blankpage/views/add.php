@@ -1,1 +1,0 @@
-<div class="page-blankpage"><?php echo "ADD PAGE" ?></div>
