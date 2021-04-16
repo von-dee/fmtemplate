@@ -1,843 +1,402 @@
 <div class="page-dashboard">
-    <div class="container">
-        <div class="page-header">
-            <h1 class="page-title">
-                Dashboard
-            </h1>
-        </div>
-        <div class="row row-cards">
-            <div class="col-6 col-sm-4 col-lg-2">
-                <div class="card">
-                    <div class="card-body p-3 text-center">
-                        <div class="text-right text-green">
-                            6%
-                            <i class="fe fe-chevron-up"></i>
-                        </div>
-                        <div class="h1 m-0">43</div>
-                        <div class="text-muted mb-4">New Tickets</div>
+    <div class="az-content az-content-dashboard">
+        <div class="container">
+            <div class="az-content-body">
+                <div class="az-dashboard-one-title">
+                    <div>
+                        <h2 class="az-dashboard-title">Hi, welcome back!</h2>
+                        <p class="az-dashboard-text">Your web analytics dashboard template.</p>
                     </div>
+                    <div class="az-content-header-right">
+                        <div class="media">
+                            <div class="media-body">
+                                <label>Start Date</label>
+                                <h6>Oct 10, 2018</h6>
+                            </div><!-- media-body -->
+                        </div><!-- media -->
+                        <div class="media">
+                            <div class="media-body">
+                                <label>End Date</label>
+                                <h6>Oct 23, 2018</h6>
+                            </div><!-- media-body -->
+                        </div><!-- media -->
+                        <div class="media">
+                            <div class="media-body">
+                                <label>Event Category</label>
+                                <h6>All Categories</h6>
+                            </div><!-- media-body -->
+                        </div><!-- media -->
+                        <a href="" class="btn btn-purple">Export</a>
+                    </div>
+                </div><!-- az-dashboard-one-title -->
+
+                <div class="az-dashboard-nav">
+                    <nav class="nav">
+                        <a class="nav-link active" data-toggle="tab" href="#">Overview</a>
+                        <a class="nav-link" data-toggle="tab" href="#">Audiences</a>
+                        <a class="nav-link" data-toggle="tab" href="#">Demographics</a>
+                        <a class="nav-link" data-toggle="tab" href="#">More</a>
+                    </nav>
+
+                    <nav class="nav">
+                        <a class="nav-link" href="#"><i class="far fa-save"></i> Save Report</a>
+                        <a class="nav-link" href="#"><i class="far fa-file-pdf"></i> Export to PDF</a>
+                        <a class="nav-link" href="#"><i class="far fa-envelope"></i>Send to Email</a>
+                        <a class="nav-link" href="#"><i class="fas fa-ellipsis-h"></i></a>
+                    </nav>
                 </div>
-            </div>
-            <div class="col-6 col-sm-4 col-lg-2">
-                <div class="card">
-                    <div class="card-body p-3 text-center">
-                        <div class="text-right text-red">
-                            -3%
-                            <i class="fe fe-chevron-down"></i>
-                        </div>
-                        <div class="h1 m-0">17</div>
-                        <div class="text-muted mb-4">Closed Today</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-lg-2">
-                <div class="card">
-                    <div class="card-body p-3 text-center">
-                        <div class="text-right text-green">
-                            9%
-                            <i class="fe fe-chevron-up"></i>
-                        </div>
-                        <div class="h1 m-0">7</div>
-                        <div class="text-muted mb-4">New Replies</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-lg-2">
-                <div class="card">
-                    <div class="card-body p-3 text-center">
-                        <div class="text-right text-green">
-                            3%
-                            <i class="fe fe-chevron-up"></i>
-                        </div>
-                        <div class="h1 m-0">27.3K</div>
-                        <div class="text-muted mb-4">Followers</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-lg-2">
-                <div class="card">
-                    <div class="card-body p-3 text-center">
-                        <div class="text-right text-red">
-                            -2%
-                            <i class="fe fe-chevron-down"></i>
-                        </div>
-                        <div class="h1 m-0">$95</div>
-                        <div class="text-muted mb-4">Daily Earnings</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-sm-4 col-lg-2">
-                <div class="card">
-                    <div class="card-body p-3 text-center">
-                        <div class="text-right text-red">
-                            -1%
-                            <i class="fe fe-chevron-down"></i>
-                        </div>
-                        <div class="h1 m-0">621</div>
-                        <div class="text-muted mb-4">Products</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="card">
-                    <div class="card-header">
-                        <h3 class="card-title">Development Activity</h3>
-                    </div>
-                    <div id="chart-development-activity" style="height: 10rem"></div>
-                    <div class="table-responsive">
-                        <table class="table card-table table-striped table-vcenter">
-                            <thead>
-                                <tr>
-                                    <th colspan="2">User</th>
-                                    <th>Commit</th>
-                                    <th>Date</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="w-1"><span class="avatar"
-                                            style="background-image: url(./demo/faces/male/9.jpg)"></span></td>
-                                    <td>Ronald Bradley</td>
-                                    <td>Initial commit</td>
-                                    <td class="text-nowrap">May 6, 2018</td>
-                                    <td class="w-1"><a href="#" class="icon"><i class="fe fe-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td><span class="avatar">BM</span></td>
-                                    <td>Russell Gibson</td>
-                                    <td>Main structure</td>
-                                    <td class="text-nowrap">April 22, 2018</td>
-                                    <td><a href="#" class="icon"><i class="fe fe-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td><span class="avatar"
-                                            style="background-image: url(./demo/faces/female/1.jpg)"></span></td>
-                                    <td>Beverly Armstrong</td>
-                                    <td>Left sidebar adjustments</td>
-                                    <td class="text-nowrap">April 15, 2018</td>
-                                    <td><a href="#" class="icon"><i class="fe fe-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td><span class="avatar"
-                                            style="background-image: url(./demo/faces/male/4.jpg)"></span></td>
-                                    <td>Bobby Knight</td>
-                                    <td>Topbar dropdown style</td>
-                                    <td class="text-nowrap">April 8, 2018</td>
-                                    <td><a href="#" class="icon"><i class="fe fe-trash"></i></a></td>
-                                </tr>
-                                <tr>
-                                    <td><span class="avatar"
-                                            style="background-image: url(./demo/faces/female/11.jpg)"></span></td>
-                                    <td>Sharon Wells</td>
-                                    <td>Fixes #625</td>
-                                    <td class="text-nowrap">April 9, 2018</td>
-                                    <td><a href="#" class="icon"><i class="fe fe-trash"></i></a></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <script>
-                    require(['c3', 'jquery'], function (c3, $) {
-                        $(document).ready(function () {
-                            var chart = c3.generate({
-                                bindto: '#chart-development-activity', // id of chart wrapper
-                                data: {
-                                    columns: [
-                                        // each columns data
-                                        ['data1', 0, 5, 1, 2, 7, 5, 6, 8, 24, 7, 12, 5, 6,
-                                            3, 2, 2, 6, 30, 10, 10, 15, 14, 47, 65, 55
-                                        ]
-                                    ],
-                                    type: 'area', // default type of chart
-                                    groups: [
-                                        ['data1', 'data2', 'data3']
-                                    ],
-                                    colors: {
-                                        'data1': tabler.colors["blue"]
-                                    },
-                                    names: {
-                                        // name of each serie
-                                        'data1': 'Purchases'
-                                    }
-                                },
-                                axis: {
-                                    y: {
-                                        padding: {
-                                            bottom: 0,
-                                        },
-                                        show: false,
-                                        tick: {
-                                            outer: false
-                                        }
-                                    },
-                                    x: {
-                                        padding: {
-                                            left: 0,
-                                            right: 0
-                                        },
-                                        show: false
-                                    }
-                                },
-                                legend: {
-                                    position: 'inset',
-                                    padding: 0,
-                                    inset: {
-                                        anchor: 'top-left',
-                                        x: 20,
-                                        y: 8,
-                                        step: 10
-                                    }
-                                },
-                                tooltip: {
-                                    format: {
-                                        title: function (x) {
-                                            return '';
-                                        }
-                                    }
-                                },
-                                padding: {
-                                    bottom: 0,
-                                    left: -1,
-                                    right: -1
-                                },
-                                point: {
-                                    show: false
-                                }
-                            });
-                        });
-                    });
-                </script>
-            </div>
-            <div class="col-md-6">
-                <div class="alert alert-primary">Are you in trouble? <a href="./docs/index.html" class="alert-link">Read
-                        our documentation</a> with code samples.</div>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="card">
+
+                <div class="row row-sm mg-b-20">
+                    <div class="col-lg-7 ht-lg-100p">
+                        <div class="card card-dashboard-one">
                             <div class="card-header">
-                                <h3 class="card-title">Chart title</h3>
-                            </div>
+                                <div>
+                                    <h6 class="card-title">Website Audience Metrics</h6>
+                                    <p class="card-text">Audience to which the users belonged while on the current date
+                                        range.</p>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn active">Day</button>
+                                    <button class="btn">Week</button>
+                                    <button class="btn">Month</button>
+                                </div>
+                            </div><!-- card-header -->
                             <div class="card-body">
-                                <div id="chart-donut" style="height: 12rem;"></div>
+                                <div class="card-body-top">
+                                    <div>
+                                        <label class="mg-b-0">Users</label>
+                                        <h2>13,956</h2>
+                                    </div>
+                                    <div>
+                                        <label class="mg-b-0">Bounce Rate</label>
+                                        <h2>33.50%</h2>
+                                    </div>
+                                    <div>
+                                        <label class="mg-b-0">Page Views</label>
+                                        <h2>83,123</h2>
+                                    </div>
+                                    <div>
+                                        <label class="mg-b-0">Sessions</label>
+                                        <h2>16,869</h2>
+                                    </div>
+                                </div><!-- card-body-top -->
+                                <div class="flot-chart-wrapper">
+                                    <div id="flotChart" class="flot-chart"></div>
+                                </div><!-- flot-chart-wrapper -->
+                            </div><!-- card-body -->
+                        </div><!-- card -->
+                    </div><!-- col -->
+                    <div class="col-lg-5 mg-t-20 mg-lg-t-0">
+                        <div class="row row-sm">
+                            <div class="col-sm-6">
+                                <div class="card card-dashboard-two">
+                                    <div class="card-header">
+                                        <h6>33.50% <i class="icon ion-md-trending-up tx-success"></i>
+                                            <small>18.02%</small></h6>
+                                        <p>Bounce Rate</p>
+                                    </div><!-- card-header -->
+                                    <div class="card-body">
+                                        <div class="chart-wrapper">
+                                            <div id="flotChart1" class="flot-chart"></div>
+                                        </div><!-- chart-wrapper -->
+                                    </div><!-- card-body -->
+                                </div><!-- card -->
+                            </div><!-- col -->
+                            <div class="col-sm-6 mg-t-20 mg-sm-t-0">
+                                <div class="card card-dashboard-two">
+                                    <div class="card-header">
+                                        <h6>86k <i class="icon ion-md-trending-down tx-danger"></i> <small>0.86%</small>
+                                        </h6>
+                                        <p>Total Users</p>
+                                    </div><!-- card-header -->
+                                    <div class="card-body">
+                                        <div class="chart-wrapper">
+                                            <div id="flotChart2" class="flot-chart"></div>
+                                        </div><!-- chart-wrapper -->
+                                    </div><!-- card-body -->
+                                </div><!-- card -->
+                            </div><!-- col -->
+                            <div class="col-sm-12 mg-t-20">
+                                <div class="card card-dashboard-three">
+                                    <div class="card-header">
+                                        <p>All Sessions</p>
+                                        <h6>16,869 <small class="tx-success"><i class="icon ion-md-arrow-up"></i>
+                                                2.87%</small></h6>
+                                        <small>The total number of sessions within the date range. It is the period time
+                                            a user is actively engaged with your website, page or app, etc.</small>
+                                    </div><!-- card-header -->
+                                    <div class="card-body">
+                                        <div class="chart"><canvas id="chartBar5"></canvas></div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <script>
-                            require(['c3', 'jquery'], function (c3, $) {
-                                $(document).ready(function () {
-                                    var chart = c3.generate({
-                                        bindto: '#chart-donut', // id of chart wrapper
-                                        data: {
-                                            columns: [
-                                                // each columns data
-                                                ['data1', 63],
-                                                ['data2', 37]
-                                            ],
-                                            type: 'donut', // default type of chart
-                                            colors: {
-                                                'data1': tabler.colors["green"],
-                                                'data2': tabler.colors["green-light"]
-                                            },
-                                            names: {
-                                                // name of each serie
-                                                'data1': 'Maximum',
-                                                'data2': 'Minimum'
-                                            }
-                                        },
-                                        axis: {},
-                                        legend: {
-                                            show: false, //hide legend
-                                        },
-                                        padding: {
-                                            bottom: 0,
-                                            top: 0
-                                        },
-                                    });
-                                });
-                            });
-                        </script>
+                        </div><!-- row -->
                     </div>
-                    <div class="col-sm-6">
-                        <div class="card">
+                    <!--col -->
+                </div><!-- row -->
+
+                <div class="row row-sm mg-b-20">
+                    <div class="col-lg-4">
+                        <div class="card card-dashboard-pageviews">
                             <div class="card-header">
-                                <h3 class="card-title">Chart title</h3>
-                            </div>
+                                <h6 class="card-title">Page Views by Page Title</h6>
+                                <p class="card-text">This report is based on 100% of sessions.</p>
+                            </div><!-- card-header -->
                             <div class="card-body">
-                                <div id="chart-pie" style="height: 12rem;"></div>
-                            </div>
-                        </div>
-                        <script>
-                            require(['c3', 'jquery'], function (c3, $) {
-                                $(document).ready(function () {
-                                    var chart = c3.generate({
-                                        bindto: '#chart-pie', // id of chart wrapper
-                                        data: {
-                                            columns: [
-                                                // each columns data
-                                                ['data1', 63],
-                                                ['data2', 44],
-                                                ['data3', 12],
-                                                ['data4', 14]
-                                            ],
-                                            type: 'pie', // default type of chart
-                                            colors: {
-                                                'data1': tabler.colors["blue-darker"],
-                                                'data2': tabler.colors["blue"],
-                                                'data3': tabler.colors["blue-light"],
-                                                'data4': tabler.colors["blue-lighter"]
-                                            },
-                                            names: {
-                                                // name of each serie
-                                                'data1': 'A',
-                                                'data2': 'B',
-                                                'data3': 'C',
-                                                'data4': 'D'
-                                            }
-                                        },
-                                        axis: {},
-                                        legend: {
-                                            show: false, //hide legend
-                                        },
-                                        padding: {
-                                            bottom: 0,
-                                            top: 0
-                                        },
-                                    });
-                                });
-                            });
-                        </script>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <div class="h5">New feedback</div>
-                                <div class="display-4 font-weight-bold mb-4">62</div>
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-red" style="width: 28%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <div class="h5">Today profit</div>
-                                <div class="display-4 font-weight-bold mb-4">$652</div>
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-green" style="width: 84%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="card">
-                            <div class="card-body text-center">
-                                <div class="h5">Users online</div>
-                                <div class="display-4 font-weight-bold mb-4">76</div>
-                                <div class="progress progress-sm">
-                                    <div class="progress-bar bg-yellow" style="width: 34%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                                <div class="az-list-item">
+                                    <div>
+                                        <h6>Admin Home</h6>
+                                        <span>/demo/admin/index.html</span>
+                                    </div>
+                                    <div>
+                                        <h6 class="tx-primary">7,755</h6>
+                                        <span>31.74% (-100.00%)</span>
+                                    </div>
+                                </div><!-- list-group-item -->
+                                <div class="az-list-item">
+                                    <div>
+                                        <h6>Form Elements</h6>
+                                        <span>/demo/admin/forms.html</span>
+                                    </div>
+                                    <div>
+                                        <h6 class="tx-primary">5,215</h6>
+                                        <span>28.53% (-100.00%)</span>
+                                    </div>
+                                </div><!-- list-group-item -->
+                                <div class="az-list-item">
+                                    <div>
+                                        <h6>Utilities</h6>
+                                        <span>/demo/admin/util.html</span>
+                                    </div>
+                                    <div>
+                                        <h6 class="tx-primary">4,848</h6>
+                                        <span>25.35% (-100.00%)</span>
+                                    </div>
+                                </div><!-- list-group-item -->
+                                <div class="az-list-item">
+                                    <div>
+                                        <h6>Form Validation</h6>
+                                        <span>/demo/admin/validation.html</span>
+                                    </div>
+                                    <div>
+                                        <h6 class="tx-primary">3,275</h6>
+                                        <span>23.17% (-100.00%)</span>
+                                    </div>
+                                </div><!-- list-group-item -->
+                                <div class="az-list-item">
+                                    <div>
+                                        <h6>Modals</h6>
+                                        <span>/demo/admin/modals.html</span>
+                                    </div>
+                                    <div>
+                                        <h6 class="tx-primary">3,003</h6>
+                                        <span>22.21% (-100.00%)</span>
+                                    </div>
+                                </div><!-- list-group-item -->
+                            </div><!-- card-body -->
+                        </div><!-- card -->
+
+                    </div><!-- col -->
+                    <div class="col-lg-8 mg-t-20 mg-lg-t-0">
+                        <div class="card card-dashboard-four">
+                            <div class="card-header">
+                                <h6 class="card-title">Sessions by Channel</h6>
+                            </div><!-- card-header -->
+                            <div class="card-body row">
+                                <div class="col-md-6 d-flex align-items-center">
+                                    <div class="chart"><canvas id="chartDonut"></canvas></div>
+                                </div><!-- col -->
+                                <div class="col-md-6 col-lg-5 mg-lg-l-auto mg-t-20 mg-md-t-0">
+                                    <div class="az-traffic-detail-item">
+                                        <div>
+                                            <span>Organic Search</span>
+                                            <span>1,320 <span>(25%)</span></span>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-purple wd-25p" role="progressbar"
+                                                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div><!-- progress -->
+                                    </div>
+                                    <div class="az-traffic-detail-item">
+                                        <div>
+                                            <span>Email</span>
+                                            <span>987 <span>(20%)</span></span>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-primary wd-20p" role="progressbar"
+                                                aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div><!-- progress -->
+                                    </div>
+                                    <div class="az-traffic-detail-item">
+                                        <div>
+                                            <span>Referral</span>
+                                            <span>2,010 <span>(30%)</span></span>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-info wd-30p" role="progressbar"
+                                                aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div><!-- progress -->
+                                    </div>
+                                    <div class="az-traffic-detail-item">
+                                        <div>
+                                            <span>Social</span>
+                                            <span>654 <span>(15%)</span></span>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-teal wd-15p" role="progressbar"
+                                                aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div><!-- progress -->
+                                    </div>
+                                    <div class="az-traffic-detail-item">
+                                        <div>
+                                            <span>Other</span>
+                                            <span>400 <span>(10%)</span></span>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-gray-500 wd-10p" role="progressbar"
+                                                aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div><!-- progress -->
+                                    </div>
+                                </div><!-- col -->
+                            </div><!-- card-body -->
+                        </div><!-- card-dashboard-four -->
+                    </div><!-- col -->
+                </div><!-- row -->
+
+                <div class="row row-sm mg-b-20 mg-lg-b-0">
+                    <div class="col-lg-5 col-xl-4">
+                        <div class="row row-sm">
+                            <div class="col-md-6 col-lg-12 mg-b-20 mg-md-b-0 mg-lg-b-20">
+                                <div class="card card-dashboard-five">
+                                    <div class="card-header">
+                                        <h6 class="card-title">Acquisition</h6>
+                                        <span class="card-text">Tells you where your visitors originated from, such as
+                                            search engines, social networks or website referrals.</span>
+                                    </div><!-- card-header -->
+                                    <div class="card-body row row-sm">
+                                        <div class="col-6 d-sm-flex align-items-center">
+                                            <div class="card-chart bg-primary">
+                                                <span class="peity-bar"
+                                                    data-peity='{"fill": ["#fff"], "width": 20, "height": 20 }'>6,4,7,5,7</span>
+                                            </div>
+                                            <div>
+                                                <label>Bounce Rate</label>
+                                                <h4>33.50%</h4>
+                                            </div>
+                                        </div><!-- col -->
+                                        <div class="col-6 d-sm-flex align-items-center">
+                                            <div class="card-chart bg-purple">
+                                                <span class="peity-bar"
+                                                    data-peity='{"fill": ["#fff"], "width": 21, "height": 20 }'>7,4,5,7,2</span>
+                                            </div>
+                                            <div>
+                                                <label>Sessions</label>
+                                                <h4>9,065</h4>
+                                            </div>
+                                        </div><!-- col -->
+                                    </div><!-- card-body -->
+                                </div><!-- card-dashboard-five -->
+                            </div><!-- col -->
+                            <div class="col-md-6 col-lg-12">
+                                <div class="card card-dashboard-five">
+                                    <div class="card-header">
+                                        <h6 class="card-title">Sessions</h6>
+                                        <span class="card-text"> A session is the period time a user is actively engaged
+                                            with your website, app, etc.</span>
+                                    </div><!-- card-header -->
+                                    <div class="card-body row row-sm">
+                                        <div class="col-6 d-sm-flex align-items-center">
+                                            <div class="mg-b-10 mg-sm-b-0 mg-sm-r-10">
+                                                <span class="peity-donut"
+                                                    data-peity='{ "fill": ["#007bff", "#cad0e8"],  "innerRadius": 14, "radius": 20 }'>4/7</span>
+                                            </div>
+                                            <div>
+                                                <label>% New Sessions</label>
+                                                <h4>26.80%</h4>
+                                            </div>
+                                        </div><!-- col -->
+                                        <div class="col-6 d-sm-flex align-items-center">
+                                            <div class="mg-b-10 mg-sm-b-0 mg-sm-r-10">
+                                                <span class="peity-donut"
+                                                    data-peity='{ "fill": ["#00cccc", "#cad0e8"],  "innerRadius": 14, "radius": 20 }'>2/7</span>
+                                            </div>
+                                            <div>
+                                                <label>Pages/Session</label>
+                                                <h4>1,005</h4>
+                                            </div>
+                                        </div><!-- col -->
+                                    </div><!-- card-body -->
+                                </div><!-- card-dashboard-five -->
+                            </div><!-- col -->
+                        </div><!-- row -->
+                    </div><!-- col-lg-3 -->
+                    <div class="col-lg-7 col-xl-8 mg-t-20 mg-lg-t-0">
+                        <div class="card card-table-one">
+                            <h6 class="card-title">What pages do your users visit</h6>
+                            <p class="az-content-text mg-b-20">Part of this date range occurs before the new users
+                                metric had been calculated, so the old users metric is displayed.</p>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th class="wd-5p">&nbsp;</th>
+                                            <th class="wd-45p">Country</th>
+                                            <th>Entrances</th>
+                                            <th>Bounce Rate</th>
+                                            <th>Exits</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><i class="flag-icon flag-icon-us flag-icon-squared"></i></td>
+                                            <td><strong>United States</strong></td>
+                                            <td><strong>134</strong> (1.51%)</td>
+                                            <td>33.58%</td>
+                                            <td>15.47%</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="flag-icon flag-icon-gb flag-icon-squared"></i></td>
+                                            <td><strong>United Kingdom</strong></td>
+                                            <td><strong>290</strong> (3.30%)</td>
+                                            <td>9.22%</td>
+                                            <td>7.99%</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="flag-icon flag-icon-in flag-icon-squared"></i></td>
+                                            <td><strong>India</strong></td>
+                                            <td><strong>250</strong> (3.00%)</td>
+                                            <td>20.75%</td>
+                                            <td>2.40%</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="flag-icon flag-icon-ca flag-icon-squared"></i></td>
+                                            <td><strong>Canada</strong></td>
+                                            <td><strong>216</strong> (2.79%)</td>
+                                            <td>32.07%</td>
+                                            <td>15.09%</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="flag-icon flag-icon-fr flag-icon-squared"></i></td>
+                                            <td><strong>France</strong></td>
+                                            <td><strong>216</strong> (2.79%)</td>
+                                            <td>32.07%</td>
+                                            <td>15.09%</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="flag-icon flag-icon-ph flag-icon-squared"></i></td>
+                                            <td><strong>Philippines</strong></td>
+                                            <td><strong>197</strong> (2.12%)</td>
+                                            <td>32.07%</td>
+                                            <td>15.09%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div><!-- table-responsive -->
+                        </div><!-- card -->
+                    </div><!-- col-lg -->
+
+                </div><!-- row -->
+            </div><!-- az-content-body -->
         </div>
-        <div class="row row-cards row-deck">
-            <div class="col-12">
-                <div class="card">
-                    <div class="table-responsive">
-                        <table class="table table-hover table-outline table-vcenter text-nowrap card-table">
-                            <thead>
-                                <tr>
-                                    <th class="text-center w-1"><i class="icon-people"></i></th>
-                                    <th>User</th>
-                                    <th>Usage</th>
-                                    <th class="text-center">Payment</th>
-                                    <th>Activity</th>
-                                    <th class="text-center">Satisfaction</th>
-                                    <th class="text-center"><i class="icon-settings"></i></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="text-center">
-                                        <div class="avatar d-block"
-                                            style="background-image: url(demo/faces/female/26.jpg)">
-                                            <span class="avatar-status bg-green"></span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div>Elizabeth Martin</div>
-                                        <div class="small text-muted">
-                                            Registered: Mar 9, 2018
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="clearfix">
-                                            <div class="float-left">
-                                                <strong>42%</strong>
-                                            </div>
-                                            <div class="float-right">
-                                                <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
-                                            </div>
-                                        </div>
-                                        <div class="progress progress-xs">
-                                            <div class="progress-bar bg-yellow" role="progressbar" style="width: 42%"
-                                                aria-valuenow="42" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td class="text-center">
-                                        <i class="payment payment-visa"></i>
-                                    </td>
-                                    <td>
-                                        <div class="small text-muted">Last login</div>
-                                        <div>4 minutes ago</div>
-                                    </td>
-                                    <td class="text-center">
-                                        <div class="mx-auto chart-circle chart-circle-xs" data-value="0.42"
-                                            data-thickness="3" data-color="blue">
-                                            <div class="chart-circle-value">42%</div>
-                                        </div>
-                                    </td>
-                                    <td class="text-center">
-                                        <div class="item-action dropdown">
-                                            <a href="javascript:void(0)" data-toggle="dropdown" class="icon"><i
-                                                    class="fe fe-more-vertical"></i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-tag"></i> Action </a>
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-edit-2"></i> Another action </a>
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-message-square"></i> Something else
-                                                    here</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-link"></i> Separated link</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">
-                                        <div class="avatar d-block"
-                                            style="background-image: url(demo/faces/female/17.jpg)">
-                                            <span class="avatar-status bg-green"></span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div>Michelle Schultz</div>
-                                        <div class="small text-muted">
-                                            Registered: Feb 21, 2018
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="clearfix">
-                                            <div class="float-left">
-                                                <strong>0%</strong>
-                                            </div>
-                                            <div class="float-right">
-                                                <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
-                                            </div>
-                                        </div>
-                                        <div class="progress progress-xs">
-                                            <div class="progress-bar bg-red" role="progressbar" style="width: 0%"
-                                                aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td class="text-center">
-                                        <i class="payment payment-googlewallet"></i>
-                                    </td>
-                                    <td>
-                                        <div class="small text-muted">Last login</div>
-                                        <div>5 minutes ago</div>
-                                    </td>
-                                    <td class="text-center">
-                                        <div class="mx-auto chart-circle chart-circle-xs" data-value="0.0"
-                                            data-thickness="3" data-color="blue">
-                                            <div class="chart-circle-value">0%</div>
-                                        </div>
-                                    </td>
-                                    <td class="text-center">
-                                        <div class="item-action dropdown">
-                                            <a href="javascript:void(0)" data-toggle="dropdown" class="icon"><i
-                                                    class="fe fe-more-vertical"></i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-tag"></i> Action </a>
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-edit-2"></i> Another action </a>
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-message-square"></i> Something else
-                                                    here</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-link"></i> Separated link</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">
-                                        <div class="avatar d-block"
-                                            style="background-image: url(demo/faces/female/21.jpg)">
-                                            <span class="avatar-status bg-green"></span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div>Crystal Austin</div>
-                                        <div class="small text-muted">
-                                            Registered: Mar 28, 2018
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="clearfix">
-                                            <div class="float-left">
-                                                <strong>96%</strong>
-                                            </div>
-                                            <div class="float-right">
-                                                <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
-                                            </div>
-                                        </div>
-                                        <div class="progress progress-xs">
-                                            <div class="progress-bar bg-green" role="progressbar" style="width: 96%"
-                                                aria-valuenow="96" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td class="text-center">
-                                        <i class="payment payment-mastercard"></i>
-                                    </td>
-                                    <td>
-                                        <div class="small text-muted">Last login</div>
-                                        <div>a minute ago</div>
-                                    </td>
-                                    <td class="text-center">
-                                        <div class="mx-auto chart-circle chart-circle-xs" data-value="0.96"
-                                            data-thickness="3" data-color="blue">
-                                            <div class="chart-circle-value">96%</div>
-                                        </div>
-                                    </td>
-                                    <td class="text-center">
-                                        <div class="item-action dropdown">
-                                            <a href="javascript:void(0)" data-toggle="dropdown" class="icon"><i
-                                                    class="fe fe-more-vertical"></i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-tag"></i> Action </a>
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-edit-2"></i> Another action </a>
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-message-square"></i> Something else
-                                                    here</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-link"></i> Separated link</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">
-                                        <div class="avatar d-block"
-                                            style="background-image: url(demo/faces/male/32.jpg)">
-                                            <span class="avatar-status bg-green"></span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div>Douglas Ray</div>
-                                        <div class="small text-muted">
-                                            Registered: Jan 6, 2018
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="clearfix">
-                                            <div class="float-left">
-                                                <strong>6%</strong>
-                                            </div>
-                                            <div class="float-right">
-                                                <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
-                                            </div>
-                                        </div>
-                                        <div class="progress progress-xs">
-                                            <div class="progress-bar bg-red" role="progressbar" style="width: 6%"
-                                                aria-valuenow="6" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td class="text-center">
-                                        <i class="payment payment-shopify"></i>
-                                    </td>
-                                    <td>
-                                        <div class="small text-muted">Last login</div>
-                                        <div>a minute ago</div>
-                                    </td>
-                                    <td class="text-center">
-                                        <div class="mx-auto chart-circle chart-circle-xs" data-value="0.06"
-                                            data-thickness="3" data-color="blue">
-                                            <div class="chart-circle-value">6%</div>
-                                        </div>
-                                    </td>
-                                    <td class="text-center">
-                                        <div class="item-action dropdown">
-                                            <a href="javascript:void(0)" data-toggle="dropdown" class="icon"><i
-                                                    class="fe fe-more-vertical"></i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-tag"></i> Action </a>
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-edit-2"></i> Another action </a>
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-message-square"></i> Something else
-                                                    here</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-link"></i> Separated link</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">
-                                        <div class="avatar d-block"
-                                            style="background-image: url(demo/faces/female/12.jpg)">
-                                            <span class="avatar-status bg-green"></span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div>Teresa Reyes</div>
-                                        <div class="small text-muted">
-                                            Registered: Feb 23, 2018
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="clearfix">
-                                            <div class="float-left">
-                                                <strong>36%</strong>
-                                            </div>
-                                            <div class="float-right">
-                                                <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
-                                            </div>
-                                        </div>
-                                        <div class="progress progress-xs">
-                                            <div class="progress-bar bg-red" role="progressbar" style="width: 36%"
-                                                aria-valuenow="36" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td class="text-center">
-                                        <i class="payment payment-ebay"></i>
-                                    </td>
-                                    <td>
-                                        <div class="small text-muted">Last login</div>
-                                        <div>2 minutes ago</div>
-                                    </td>
-                                    <td class="text-center">
-                                        <div class="mx-auto chart-circle chart-circle-xs" data-value="0.36"
-                                            data-thickness="3" data-color="blue">
-                                            <div class="chart-circle-value">36%</div>
-                                        </div>
-                                    </td>
-                                    <td class="text-center">
-                                        <div class="item-action dropdown">
-                                            <a href="javascript:void(0)" data-toggle="dropdown" class="icon"><i
-                                                    class="fe fe-more-vertical"></i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-tag"></i> Action </a>
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-edit-2"></i> Another action </a>
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-message-square"></i> Something else
-                                                    here</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-link"></i> Separated link</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">
-                                        <div class="avatar d-block"
-                                            style="background-image: url(demo/faces/female/4.jpg)">
-                                            <span class="avatar-status bg-green"></span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div>Emma Wade</div>
-                                        <div class="small text-muted">
-                                            Registered: Mar 10, 2018
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="clearfix">
-                                            <div class="float-left">
-                                                <strong>7%</strong>
-                                            </div>
-                                            <div class="float-right">
-                                                <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
-                                            </div>
-                                        </div>
-                                        <div class="progress progress-xs">
-                                            <div class="progress-bar bg-red" role="progressbar" style="width: 7%"
-                                                aria-valuenow="7" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td class="text-center">
-                                        <i class="payment payment-paypal"></i>
-                                    </td>
-                                    <td>
-                                        <div class="small text-muted">Last login</div>
-                                        <div>a minute ago</div>
-                                    </td>
-                                    <td class="text-center">
-                                        <div class="mx-auto chart-circle chart-circle-xs" data-value="0.07"
-                                            data-thickness="3" data-color="blue">
-                                            <div class="chart-circle-value">7%</div>
-                                        </div>
-                                    </td>
-                                    <td class="text-center">
-                                        <div class="item-action dropdown">
-                                            <a href="javascript:void(0)" data-toggle="dropdown" class="icon"><i
-                                                    class="fe fe-more-vertical"></i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-tag"></i> Action </a>
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-edit-2"></i> Another action </a>
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-message-square"></i> Something else
-                                                    here</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-link"></i> Separated link</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">
-                                        <div class="avatar d-block"
-                                            style="background-image: url(demo/faces/female/27.jpg)">
-                                            <span class="avatar-status bg-green"></span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div>Carol Henderson</div>
-                                        <div class="small text-muted">
-                                            Registered: Feb 12, 2018
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="clearfix">
-                                            <div class="float-left">
-                                                <strong>80%</strong>
-                                            </div>
-                                            <div class="float-right">
-                                                <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
-                                            </div>
-                                        </div>
-                                        <div class="progress progress-xs">
-                                            <div class="progress-bar bg-green" role="progressbar" style="width: 80%"
-                                                aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td class="text-center">
-                                        <i class="payment payment-visa"></i>
-                                    </td>
-                                    <td>
-                                        <div class="small text-muted">Last login</div>
-                                        <div>9 minutes ago</div>
-                                    </td>
-                                    <td class="text-center">
-                                        <div class="mx-auto chart-circle chart-circle-xs" data-value="0.8"
-                                            data-thickness="3" data-color="blue">
-                                            <div class="chart-circle-value">80%</div>
-                                        </div>
-                                    </td>
-                                    <td class="text-center">
-                                        <div class="item-action dropdown">
-                                            <a href="javascript:void(0)" data-toggle="dropdown" class="icon"><i
-                                                    class="fe fe-more-vertical"></i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-tag"></i> Action </a>
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-edit-2"></i> Another action </a>
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-message-square"></i> Something else
-                                                    here</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-link"></i> Separated link</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">
-                                        <div class="avatar d-block"
-                                            style="background-image: url(demo/faces/male/20.jpg)">
-                                            <span class="avatar-status bg-green"></span>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div>Christopher Harvey</div>
-                                        <div class="small text-muted">
-                                            Registered: Jan 12, 2018
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="clearfix">
-                                            <div class="float-left">
-                                                <strong>83%</strong>
-                                            </div>
-                                            <div class="float-right">
-                                                <small class="text-muted">Jun 11, 2015 - Jul 10, 2015</small>
-                                            </div>
-                                        </div>
-                                        <div class="progress progress-xs">
-                                            <div class="progress-bar bg-green" role="progressbar" style="width: 83%"
-                                                aria-valuenow="83" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </td>
-                                    <td class="text-center">
-                                        <i class="payment payment-googlewallet"></i>
-                                    </td>
-                                    <td>
-                                        <div class="small text-muted">Last login</div>
-                                        <div>8 minutes ago</div>
-                                    </td>
-                                    <td class="text-center">
-                                        <div class="mx-auto chart-circle chart-circle-xs" data-value="0.83"
-                                            data-thickness="3" data-color="blue">
-                                            <div class="chart-circle-value">83%</div>
-                                        </div>
-                                    </td>
-                                    <td class="text-center">
-                                        <div class="item-action dropdown">
-                                            <a href="javascript:void(0)" data-toggle="dropdown" class="icon"><i
-                                                    class="fe fe-more-vertical"></i></a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-tag"></i> Action </a>
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-edit-2"></i> Another action </a>
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-message-square"></i> Something else
-                                                    here</a>
-                                                <div class="dropdown-divider"></div>
-                                                <a href="javascript:void(0)" class="dropdown-item"><i
-                                                        class="dropdown-icon fe fe-link"></i> Separated link</a>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    </div><!-- az-content -->
 </div>

@@ -1,6 +1,6 @@
 <?php include SPATH_THEME.DS.'header.php';?> 
   <?php include SPATH_THEME.DS.'navigation.php'; $token= generateFormToken();?> 
-  <div class="my-3 my-md-5">
+
     <form name="myform" id="myform" method="post" action="#" data-toggle="validator" role="form"
     enctype="multipart/form-data" autocomplete="off">
         <input id="view" name="view" value="" type="hidden" />
@@ -17,5 +17,7 @@
             $session->set($pg.'_token', $token);  
         ?>
     </form>
-  </div>
+  
 <?php include SPATH_THEME.DS.'footer.php';?> 
+
+    
