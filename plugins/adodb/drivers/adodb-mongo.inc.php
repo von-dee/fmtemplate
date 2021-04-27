@@ -57,6 +57,7 @@ if (!defined('ADODB_DIR')) die();
 	var $deletedResult = false;
 	var $documents_structure = null;
 	var $_queryobj=[];
+	var $_insertkeys =[];
 
 	function __construct()
 	{	    
@@ -219,9 +220,37 @@ if (!defined('ADODB_DIR')) die();
 	function InsertOne($collection,Array $document = [], Array $options = []){
 	    try {
 	        $checker  = $this->if_filedsExist($collection,$document);
-	        var_dump($checker);
+	        
 	        if($checker === true){
 	            $this->insertResult  = $this->_db->$collection->insertOne($document,$options); //INSERT INTO Table () VALUES ()
+	            if(!is_null($this->insertResult)) {
+	                return $this->insertResult;
+	            }
+	        }
+	        return false;
+	    } catch (Exception $e) {
+	        $this->setErrorMsg = $e->getMessage();
+	        $this->setErrorNo = $e->getCode();
+	        return false;
+	    }
+		
+	}//->End
+
+	/***
+	 *  Code for Inserting a record into the DB
+	 *  @param  $collection String  Name of the Collection (Table) to query
+	 *  @param  $document   Array  The document (Data) to insert into the collection (Table)
+	 *  @param  $options	Array Optional. An array specifying the desired options.
+	 *
+	 *  @return array of arrays
+	 ***/
+
+	function InsertMany($collection,Array $document = [], Array $options = []){
+	    try {
+	        $checker  = $this->if_filedsExist($collection,$document);
+	        
+	        if($checker === true){
+	            $this->insertResult  = $this->_db->$collection->insertMany($document,$options); //INSERT INTO Table () VALUES ()
 	            if(!is_null($this->insertResult)) {
 	                return $this->insertResult;
 	            }
@@ -269,6 +298,23 @@ if (!defined('ADODB_DIR')) die();
 	   
 	}//->End
 
+	private function _getAllKeys($document){
+		if(is_array($document)){
+			foreach($document as $keys => $vals){
+				if(is_array($vals)){
+					$this->_getAllKeys($vals);
+				}else{
+					//echo $keys;
+					if(!in_array($keys,$this->_insertkeys)){
+					$this->_insertkeys[] = $keys;
+					}
+					
+				}
+			}
+		}
+		
+		return $this->_insertkeys;
+	}
 
 	/***
 	 *  Code for checking if fields sent are the same as the ones in the DB
@@ -277,20 +323,24 @@ if (!defined('ADODB_DIR')) die();
 	 *  @return array of arrays
 	 ***/
 	function if_filedsExist($collection,Array $document = []){
+		//php ini hack
+		if(count($document) > 250){
+			@ini_set('xdebug.max_nesting_level', count($document)); 
+		}
 	    //GET STRUCTURE FILE
 	    $collection_structure_path = dirname(__FILE__).'/../mongodb_structures/'.$collection.'.ini';
 	    if(file_exists($collection_structure_path)){
 			$this->documents_structure = json_decode(file_get_contents($collection_structure_path));
 			
-			//$this->documents_structure =$this->documents_structure[0];
-	        $getKeys = array_keys($document);
+			$getKeys = $this->_getAllKeys($document);
+			unset($this->_insertkeys);
+
 	        if(count($getKeys) > 0 ){
 	           
 	            if(@count($this->documents_structure) > 0){
 	                foreach ($getKeys as $val){
 	                    if(!in_array($val, $this->documents_structure)){
 	                        $this->setErrorMsg ="Unknown field. Kindly create or check spelling : ".$val;
-	                        
 	                        return false;
 	                    }
 	                }
@@ -653,30 +703,28 @@ if (!defined('ADODB_DIR')) die();
 	public function gridfsUpload($collectname,$file,$options =[]){
 	    
 	    if(is_uploaded_file($file['tmp_name']) && $file['error'] == 0){
-	        $ext = array('image/pjpeg','image/jpeg','image/jpg','image/png','image/x-png','image/gif');
+			//$ext = array('image/pjpeg','image/jpeg','image/jpg','image/png','image/x-png','image/gif');
+			
 	        $rand_numb = md5(uniqid(microtime()));
 	        $neu_name = $rand_numb.$file['name'];
 	        $_name_ = $file['name'];
 	        $_type_ = $file['type'];
 	        $_tmp_name_ = $file['tmp_name'];
 	        $_size_ = $file['size'] / 1024;
-	        if(in_array($_type_,$ext)){
+	       
 	            
-	            $options['metadata']= ["name"=> $_name_,"type" =>$_type_,"size"=>$_size_,$options];
+	            $options['metadata']= array_merge(["name"=> $_name_,"type" =>$_type_,"size"=>$_size_],$options);
 	           
-	            $bucket = $this->_db->$collectname->selectGridFSBucket();
+	            $bucket = $this->_db->selectGridFSBucket(['bucketName'=> $collectname]);
 	            $stream = $bucket->openUploadStream($neu_name,$options);
 	            $contents = file_get_contents($_tmp_name_);
 	            fwrite($stream, $contents);
 	            fclose($stream);
 	            
 	            return $neu_name;
-	        }
-	        
-	        return false;
 
 	    }
-	    return FALSE;
+	    return false;
 	}
 	
 	/**
@@ -688,7 +736,7 @@ if (!defined('ADODB_DIR')) die();
 	 */
 	public function gridfsDownload($collectname,$filename){
 	    
-	    $bucket = $this->_db->$collectname->selectGridFSBucket();
+	    $bucket = $this->_db->selectGridFSBucket(['bucketName'=> $collectname]);
 	    $destination = fopen('php://temp', 'w+b');
 	    
 	    $bucket->downloadToStreamByName($filename, $destination);
@@ -704,7 +752,7 @@ if (!defined('ADODB_DIR')) die();
 	 */
 	public function gridfsSelect($collectname,$filename){
 	    
-	    $bucket = $this->_db->$collectname->selectGridFSBucket();
+	    $bucket = $this->_db->selectGridFSBucket(['bucketName'=> $collectname]);
 	    $stream = $bucket->openDownloadStreamByName($filename, ['revision' => 0]);
 	    $contents = stream_get_contents($stream);
 	    
@@ -719,7 +767,7 @@ if (!defined('ADODB_DIR')) die();
 	 * @return object
 	 */
 	public function gridfsGetMetadata($collectname,$filename){
-	    $bucket = $this->_db->$collectname->selectGridFSBucket();
+	    $bucket = $this->_db->selectGridFSBucket(['bucketName'=> $collectname]);
 	    
 	    $cursor = $bucket->find(['filename' => $filename]);
 	    $result = $cursor;
@@ -735,7 +783,7 @@ if (!defined('ADODB_DIR')) die();
 	 */
 	public function gridfsDelete($collectname,$filename){
 	    $fileid =0;
-	    $bucket = $this->_db->$collectname->selectGridFSBucket();
+	   $bucket = $this->_db->selectGridFSBucket(['bucketName'=> $collectname]);
 	    $stream = $bucket->openDownloadStreamByName($filename, ['revision' => 0]);
 	    $fileId = $bucket->getFileIdForStream($stream);
 	    if(!empty($fileId)){

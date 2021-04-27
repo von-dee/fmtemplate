@@ -27,6 +27,7 @@ $engine = new Engine();
 $config = new JConfig();
 $nav = new Nav();
 
+$menu = new Menu();
 
 
 //ini_set('display_errors', 1);

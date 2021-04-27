@@ -10,38 +10,37 @@
         <a href="" class="close">&times;</a>
       </div><!-- az-header-menu-header -->
       <ul class="nav">
-        <li class="nav-item active show">
-          <a href="index.php?p=dashboard" class="nav-link"><i class="typcn typcn-chart-area-outline"></i> Dashboard</a>
-        </li>
-        <li class="nav-item">
-          <a href="" class="nav-link with-sub"><i class="typcn typcn-document"></i> Pages</a>
-          <nav class="az-menu-sub">
-            <a href="page-signin.html" class="nav-link">Sign In</a>
-            <a href="page-signup.html" class="nav-link">Sign Up</a>
-          </nav>
-        </li>
-        <li class="nav-item">
-          <a href="chart-chartjs.html" class="nav-link"><i class="typcn typcn-chart-bar-outline"></i> Charts</a>
-        </li>
-        <li class="nav-item">
-          <a href="form-elements.html" class="nav-link"><i class="typcn typcn-chart-bar-outline"></i> Forms</a>
-        </li>
-        <li class="nav-item">
-          <a href="" class="nav-link with-sub"><i class="typcn typcn-book"></i> Components</a>
-          <div class="az-menu-sub">
-            <div class="container">
-              <div>
-                <nav class="nav">
-                  <a href="elem-buttons.html" class="nav-link">Buttons</a>
-                  <a href="elem-dropdown.html" class="nav-link">Dropdown</a>
-                  <a href="elem-icons.html" class="nav-link">Icons</a>
-                  <a href="table-basic.html" class="nav-link">Table</a>
-                </nav>
-              </div>
-            </div><!-- container -->
-          </div>
-        </li>
-      </ul>
+                <li class="nav-item <?php echo(($pg=='dashboard'))?'active' :'';?>">
+                    <a href="index.php?pg=dashboard" class="nav-link"><i class="typcn typcn-chart-area-outline"></i> Dashboard</a>
+                </li>
+                <?php
+                    $rootmnu = $menu->rootmenu();
+                    foreach ($rootmnu as $root) {
+                        $submenu = $menu->submenu();
+                        $check = $menu->has_submenu($root['RMN_CODE'], $submenu, 'SMN_RMN_CODE');
+                        if($check){
+                ?>
+                
+                <li class="nav-item <?php echo(($pg==$nav->activetab($root['RMN_SLUG'])))?'active' :'';?>">
+                    <a href="" class="nav-link with-sub"><i class="typcn <?php echo $root['RMN_ICON'];?>"></i> <?php echo $root['RMN_NAME'];?></a>
+                    <nav class="az-menu-sub">
+                        <?php 
+                            foreach($submenu as $sub){
+                            if($sub['SMN_RMN_CODE'] == $root['RMN_CODE']){
+                                $root_url = (string) $root['RMN_SLUG'];
+                                $sub_url = (string) $sub['SMN_SLUG'];
+                        ?>
+                        <a href="<?php echo $nav->navigate($root_url,$sub_url);?>" class="nav-link"><?php echo $sub['SMN_NAME'];?></a>
+                        <?php }}?>
+                    </nav>
+                </li>
+                <?php } else { ?>
+                        <li class="nav-item <?php echo(($pg==$nav->activetab($root['RMN_SLUG'])))?'active' :'';?>">
+                            <a class="nav-link" href="<?php echo $nav->navigate($root['RMN_SLUG']);?>"><i class="typcn typcn-chart-area-outline"></i> <?php echo $root['RMN_NAME'];?></a>
+                        </li>
+                    <?php } ?>
+                <?php } ?>
+            </ul>
     </div><!-- az-header-menu -->
     <div class="az-header-right">
       <a href="https://www.bootstrapdash.com/demo/azia-free/docs/documentation.html" target="_blank"
@@ -92,14 +91,14 @@
         </div><!-- dropdown-menu -->
       </div><!-- az-header-notification -->
       <div class="dropdown az-profile-menu">
-        <a href="" class="az-img-user"><img src="media/img/faces/face1.jpg" alt=""></a>
+        <a href="" class="az-img-user"><img src="media/img/user.png" alt=""></a>
         <div class="dropdown-menu">
           <div class="az-dropdown-header d-sm-none">
             <a href="" class="az-header-arrow"><i class="icon ion-md-arrow-back"></i></a>
           </div>
           <div class="az-header-profile">
             <div class="az-img-user">
-              <img src="media/img/faces/face1.jpg" alt="">
+              <img src="media/img/user.png" alt="">
             </div><!-- az-img-user -->
             <h6>Aziana Pechon</h6>
             <span>Premium Member</span>
@@ -110,6 +109,7 @@
           <a href="" class="dropdown-item"><i class="typcn typcn-time"></i> Activity Logs</a>
           <a href="" class="dropdown-item"><i class="typcn typcn-cog-outline"></i> Account Settings</a>
           <a href="#" class="dropdown-item" onclick="logout()"><i class="typcn typcn-power-outline"></i> Sign Out</a>
+          
         </div><!-- dropdown-menu -->
       </div>
     </div><!-- az-header-right -->

@@ -13,6 +13,12 @@ class Nav extends Engine{
         parent::__construct();
     }
 
+    
+    public function activetab($module){
+        $url= $this->encodeURL($module);
+        return  urldecode($url);
+    }
+
     public function navigate($root,$option=null,$target=null){
         $url = '';
         if($root!==null && $option==null && $target==null){

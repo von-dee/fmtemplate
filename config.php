@@ -2,7 +2,7 @@
 global $pg,$option,$target,$view,$viewpage,$msg,$status,$keys,$microtime,$formToken;
 // SYSTEM VARIABLES
 define("DEV_MODE",'true');
-define("APP_NAME","Admin System.");
+define("APP_NAME","finsys.");
 define("APP_FAVICON","media/images/favicon.png");
 define("APP_LOGO","media/images/logo.svg");
 
@@ -15,6 +15,10 @@ define("SPATH_PUBLIC",    SPATH_ROOT.DS."public");
 define("SPATH_THEME",     SPATH_ROOT.DS."theme");
 define("SPATH_INSTALL",   SPATH_ROOT.DS."install");
 define("SPATH_UPLOAD",    SPATH_MEDIA.DS."upload/");
+
+define("WEB_DB_PREFIX",  "fmdb_");
+
+
 
 
 //Post Keeper
@@ -89,6 +93,7 @@ include SPATH_LIBRARIES.DS."lib.engine.php";
 include SPATH_LIBRARIES.DS."lib.login.php";
 include SPATH_LIBRARIES.DS."lib.navigator.php";
 include SPATH_LIBRARIES.DS."lib.pagination.php";
+include SPATH_LIBRARIES.DS."lib.menu.php";
 if(DEV_MODE=='true'){
 	include SPATH_PLUGINS.DS."style.inc.php";
 	include SPATH_PLUGINS.DS."scssrouter".DS."generatelinks.php";

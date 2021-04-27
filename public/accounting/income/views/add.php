@@ -1,0 +1,1 @@
+<div class="page-income"><?php echo "ADD PAGE" ?></div>
