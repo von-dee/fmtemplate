@@ -12,10 +12,33 @@
         <input id="action_search" name="action_search" value="" type="hidden" />
         <input id="microtime" name="microtime" value="<?php echo md5(microtime()); ?>" type="hidden" /> 
         <input id="token" name="token" value="<?php echo $token ; ?>" type="hidden" />  
-        <?php
-            include ($nav->nav_switch($pg));
-            $session->set($pg.'_token', $token);  
-        ?>
+
+        <div class="az-content pd-y-20 pd-lg-y-30 pd-xl-y-40">
+            <div class="containers">
+                <div class="az-content-body pd-lg-l-40 d-flex flex-column">
+                    <?php
+        
+                        $viewpage ?? '';
+                        $prefix = WEB_DB_PREFIX;
+                        $userid = $session->get('userid');
+                        $fullname = $session->get('userfullname');
+                        $firstname = $session->get('userfirstname');
+                        $accesslevel = $session->get('useraccesslevel'); 
+                        $branchcode = $session->get('branchcode');
+                        $companycode = $session->get('companycode');
+                        $companytype = $session->get('companytype');
+
+                        if(empty($limit)){
+                            $limit = 20;
+                        }
+            
+                        include ($nav->nav_switch($pg));
+                        $session->set($pg.'_token', $token);  
+                    ?>
+                </div>
+            </div>
+        </div>
+
     </form>
   
 <?php include SPATH_THEME.DS.'footer.php';?> 

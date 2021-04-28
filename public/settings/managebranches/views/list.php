@@ -1,3 +1,13 @@
+
+
+<div class="az-content-breadcrumb">
+    <span>Settings</span>
+    <span>Manage Branches</span>
+</div>
+
+<h2 class="az-content-title">Manage Branches</h2>
+
+
 <div class="page-managebranches">
     <div class="card">
         <div class="card-body">
@@ -37,11 +47,11 @@
                                                         <button type="submit"
                                                             onclick="document.getElementById('view').value='';document.getElementById('viewpage').value='';document.myform.submit;"
                                                             class="btn btn-secondary">
-                                                            <i class="la la-search"></i>
+                                                              <i class="typcn typcn-zoom-outline"></i>
                                                         </button>
-                                                        <button class="btn btn-info"
-                                                            onclick="document.getElementById('fdsearch').value='';document.myform.submit;"><i
-                                                                class="la la-refresh"></i></button>
+                                                        <button class="btn btn-info" onclick="document.getElementById('fdsearch').value='';document.myform.submit;">
+                                                            <i class="typcn typcn-refresh"></i>
+                                                        </button>
                                                     </div>
                                                 </div>
                                             </div>

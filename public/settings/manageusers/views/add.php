@@ -1,3 +1,14 @@
+
+
+
+<div class="az-content-breadcrumb">
+    <span>Settings</span>
+    <span>Manage Users</span>
+    <span>Add</span>
+</div>
+
+<h2 class="az-content-title">Add Users</h2>
+
 <div class="page-manageusers">
     <script src="public/settings/manageusers/scripts/tree.js"></script>
     <div class="card">

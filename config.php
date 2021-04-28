@@ -3,8 +3,8 @@ global $pg,$option,$target,$view,$viewpage,$msg,$status,$keys,$microtime,$formTo
 // SYSTEM VARIABLES
 define("DEV_MODE",'true');
 define("APP_NAME","finsys.");
-define("APP_FAVICON","media/images/favicon.png");
-define("APP_LOGO","media/images/logo.svg");
+define("APP_FAVICON","media/img/building.png");
+define("APP_LOGO","media/img/building.png");
 
 define("SPATH_ROOT",dirname('__FILE__'));
 define("DS",DIRECTORY_SEPARATOR);
@@ -17,6 +17,7 @@ define("SPATH_INSTALL",   SPATH_ROOT.DS."install");
 define("SPATH_UPLOAD",    SPATH_MEDIA.DS."upload/");
 
 define("WEB_DB_PREFIX",  "fmdb_");
+
 
 
 

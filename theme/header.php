@@ -23,5 +23,7 @@
     <link rel="stylesheet" href="media/css/azia.css">
     <link rel="stylesheet" href="media/css/style.css">
 
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
+
   </head>
   <body>

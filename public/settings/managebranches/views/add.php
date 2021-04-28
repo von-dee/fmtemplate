@@ -1,3 +1,18 @@
+
+
+
+
+<div class="az-content-breadcrumb">
+    <span>Settings</span>
+    <span>Manage Branches</span>
+    <span>Add Branches</span>
+</div>
+
+<h2 class="az-content-title">Add Branches</h2>
+
+
+
+
 <div class="page-managebranches">
     <div class="panel-title"></div>
     <div class="card">
@@ -11,7 +26,7 @@
                                 <?php if(isset($keys) && $keys!='undefined'){?>
                                 <button type="button" class="btn btn-success" onclick="push({'view':'','viewpage':'update','keys':'<?php echo $keys;?>'})"><i class="la la-check"></i> Update</button>
                                 <?php }else{ ?>
-                                <button type="button" class="btn btn-success" onclick="push({'view':'','viewpage':'add','payload':'<?php echo $payload;?>'})"><i class="la la-check"></i> Save</button>
+                                <button type="button" class="btn btn-success" onclick="push({'view':'','viewpage':'add','payload':'<?php echo $companycode;?>'})"><i class="la la-check"></i> Save</button>
                                 <?php }?>
 
                                 <button type="button" class="btn btn-danger" onclick="push({'view':'','viewpage':''})"><i class="la la-close"></i> Cancel</button>
@@ -22,7 +37,7 @@
                             <div class="col-sm-4">
                                 <div class="card-body">
                                     <div class="profile-photo row">
-                                        <img id="profile" src="#" alt="photo" onError="this.src='theme/assets/img/placeholder.jpg'">
+                                        <img id="profile" src="#" alt="photo" onError="this.src='media/img/building.png'">
                                     </div>
                                     <h4>Company Logo</h4>
                                 </div>

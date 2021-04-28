@@ -1,3 +1,13 @@
+
+<div class="az-content-breadcrumb">
+    <span>Settings</span>
+    <span>Manage Company</span>
+    <span>Add</span>
+</div>
+
+<h2 class="az-content-title">Add Company</h2>
+
+
 <div class="page-managecompany">
     <div class="card">
         <div class="card-body">
@@ -30,7 +40,7 @@
                                         <div class="profile-photo row">
                                             <img id="profile"
                                                 src="<?php echo (is_object($result) ? '' :  'uploads/brands/'.$result['COMP_BRAND'] );?>"
-                                                alt="photo" onError="this.src='theme/assets/img/placeholder.jpg'">
+                                                alt="photo" onError="this.src='media/img/building.png'">
                                             <input type="file" name="compimage" id="compimage" hidden>
                                             <input type="text" name="oldphoto" id="oldphoto"
                                                 value="<?php echo (is_object($result) ? '' :  $result['COMP_BRAND'] ); ?>"

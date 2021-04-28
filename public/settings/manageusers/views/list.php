@@ -1,3 +1,14 @@
+
+
+<div class="az-content-breadcrumb">
+    <span>Settings</span>
+    <span>Manage Users</span>
+</div>
+
+<h2 class="az-content-title">Manage Users</h2>
+
+
+
 <div class="page-manageusers">
     <div class="card">
         <div class="card-body">
@@ -37,11 +48,11 @@
                                                         <button type="submit"
                                                             onclick="document.getElementById('view').value='';document.getElementById('viewpage').value='';document.myform.submit;"
                                                             class="btn btn-secondary">
-                                                            <i class="la la-search"></i>
+                                                            <i class="typcn typcn-zoom-outline"></i>
                                                         </button>
-                                                        <button class="btn btn-info"
-                                                            onclick="document.getElementById('fdsearch').value='';document.myform.submit;"><i
-                                                                class="la la-refresh"></i></button>
+                                                        <button class="btn btn-info" onclick="document.getElementById('fdsearch').value='';document.myform.submit;">
+                                                            <i class="typcn typcn-refresh"></i>
+                                                        </button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -77,7 +88,7 @@
                                     ?>
                                     <tr>
                                         <th scope="row"><?php echo $i++;?></th>
-                                        <td> <img src="<?php echo 'uploads/'.$val['USR_PHOTO'];?>" alt="photo" onerror="this.src='theme/assets/img/placeholder.jpg'" avatar></td>
+                                        <td> <img class="imgphoto" src="<?php echo 'uploads/'.$val['USR_PHOTO'];?>" alt="photo" onerror="this.src='media/img/user.png'" avatar></td>
                                         <td><?php echo $val['USR_FIRSTNAME'].' '.$val['USR_OTHERNAME'];?></td>
                                         <td><?php echo $val['USR_EMAIL'];?></td>
                                         <td><?php echo (($val['USR_STATUS']==='1'))? 'Active':'Inactive';?></td>
