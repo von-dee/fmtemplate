@@ -10,8 +10,8 @@ $port     = "3306";
 
 $server   = "localhost";
 $username = "root";
-$password = ""; 
+$password = "root"; 
 
-$database = "fmdb";
+$database = "framework_orc";
 
 ?>
